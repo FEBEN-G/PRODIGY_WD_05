@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #3a6186, #89253e);
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(160, 150, 150, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+}
+
+.weather__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather__search {
+  position: relative;
+  width: 70%;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background: white;
+  color: black;
+}
+
+.weather__search i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  background-color: #f9f2f2;
+}
+
+.weather__units {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather__units span {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.weather__units span:hover {
+  background: #f4eded;
+}
+
+.weather__main {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.weather__city {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather__datetime {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather__forecast {
+  background: #f2e5e5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.weather__icon img {
+  width: 120px;
+  margin: 1rem 0;
+}
+
+.weather__temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.weather__minmax {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.weather__card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between; /* Ensures value is aligned to the right */
+  align-items: center; /* Aligns the icon and text vertically */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.weather__card i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.weather__card div {
+  width: 100%; /* Allow the div to stretch */
+  display: flex;
+  justify-content: space-between; /* Pushes the value to the right */
+  align-items: center; /* Centers content vertically */
+}
+
+.weather__card div p:last-child {
+  text-align: right; /* Aligns the value to the right */
+}
+
+/* Hover effect: Change background color when hovering over a card */
+.weather__card:hover {
+  transform: translateY(-5px);
+  background-color: #666;
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 1.5rem;
+  }
+
+  .weather__city {
+      font-size: 1.5rem;
+  }
+
+  .weather__temperature {
+      font-size: 2.5rem;
+  }
+}
